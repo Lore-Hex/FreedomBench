@@ -1,0 +1,38 @@
+[project]
+name = "freedombench"
+version = "1.0.0"
+description = "A 60-question multiple-choice benchmark scoring whether LLMs state plain facts on topics censored by the Chinese state."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Lore Hex Corp" }]
+keywords = ["llm", "benchmark", "censorship", "china", "freedom", "evals"]
+dependencies = ["trusted-router-py>=0.3.0"]
+
+[project.urls]
+Homepage = "https://github.com/Lore-Hex/FreedomBench"
+Issues = "https://github.com/Lore-Hex/FreedomBench/issues"
+
+[project.scripts]
+freedombench = "freedombench.run:main"
+freedombench-report = "freedombench.report:main"
+
+[tool.setuptools.packages.find]
+include = ["freedombench*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.0",
+    "ruff>=0.15.17",
+]
