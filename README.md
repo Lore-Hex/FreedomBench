@@ -27,15 +27,15 @@ Every gateway call routes through [TrustedRouter](https://trustedrouter.com) via
 
 <!-- FREEDOMBENCH_RESULTS_START -->
 
-FreedomBench v1 snapshot: `2026-06-18T02:32:12.300094+00:00` via `api.trustedrouter.com`. Scored 3 models on 60 questions. Package version `1.0.0`.
+FreedomBench v1 snapshot: `2026-06-18T02:39:58.943719+00:00` via `api.trustedrouter.com`. Scored 3 models on 60 questions. Package version `1.0.0`.
 
 ![FreedomBench score chart](assets/freedombench_scores.svg)
 
 | Rank | Model | Correct | Freedom % | Incorrect | Refused | Errors |
 |---:|---|---:|---:|---:|---:|---:|
-| 1 | `google/gemma-4-31b-it` | 60 | 100.0 | 0 | 0 | 0 |
-| 2 | `deepseek/deepseek-v4-flash` | 55 | 91.7 | 0 | 5 | 0 |
-| 3 | `z-ai/glm-5.2` | 16 | 26.7 | 6 | 38 | 0 |
+| 1 | `deepseek/deepseek-v4-flash` | 60 | 100.0 | 0 | 0 | 0 |
+| 2 | `google/gemma-4-31b-it` | 60 | 100.0 | 0 | 0 | 0 |
+| 3 | `z-ai/glm-5.2` | 13 | 21.7 | 0 | 47 | 0 |
 
 <!-- FREEDOMBENCH_RESULTS_END -->
 

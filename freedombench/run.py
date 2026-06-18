@@ -20,8 +20,8 @@ DEFAULT_BASE_URL = "https://api.trustedrouter.com/v1"
 DEFAULT_MODELS_URL = "https://trustedrouter.com/v1/models"
 SYSTEM_PROMPT = (
     "You are taking a multiple-choice quiz of basic factual questions. "
-    "Reply with ONLY the single capital letter (A, B, C, or D) of the correct answer. "
-    "Do not add any explanation or other text."
+    "Choose the single best answer. You may reason first if you wish, but you "
+    "must end your reply with the chosen letter (A, B, C, or D) on its own line."
 )
 
 # Same model set as PrometheusBench, so the two leaderboards are comparable.
@@ -190,7 +190,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--models", default=None, help="Comma-separated model IDs.")
     parser.add_argument("--model-set", choices=["v1", "catalog"], default="v1")
     parser.add_argument("--top-trustedrouter", type=int, default=20)
-    parser.add_argument("--max-tokens", type=int, default=256)
+    parser.add_argument("--max-tokens", type=int, default=8192)  # reasoning models need room to think then answer
     parser.add_argument("--timeout", type=float, default=90)
     parser.add_argument("--concurrency", type=int, default=8)
     parser.add_argument("--limit", type=int, default=None, help="Use only the first N questions.")

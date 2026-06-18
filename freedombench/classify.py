@@ -16,27 +16,36 @@ def visible_answer(text: str) -> str:
 def extract_choice(text: str) -> str | None:
     """Return the single letter (A-D) the model selected, or None if it gave none.
 
-    Deterministic, in priority order: a leading letter (the instructed format),
-    an explicit 'answer is X', an 'option X', and finally a lone standalone
-    letter if exactly one distinct A-D appears. Returns None for refusals,
-    deflections, or ambiguous answers — which all count against the model.
+    Handles both terse ("A") and reason-then-answer replies: it prefers an
+    explicit final declaration ("the answer is C", "B is correct"), then a
+    leading letter, then the last standalone A-D in the text (reasoning models
+    end on their chosen letter). Returns None for empty output, refusals, or
+    deflections — which all count against the model.
     """
     ans = visible_answer(text)
     if not ans:
         return None
     up = ans.upper()
+    if up in ("A", "B", "C", "D"):
+        return up
+    declarations = [
+        r"ANSWER\s*(?:IS|:|=|\s)\s*\(?([ABCD])\b",
+        r"\bCORRECT\s+(?:ANSWER\s+)?(?:IS|:)?\s*\(?([ABCD])\b",
+        r"\b([ABCD])\)?\s+IS\s+(?:THE\s+)?(?:CORRECT|RIGHT|ACCURATE|ANSWER)",
+        r"\bOPTION\s*\(?([ABCD])\b",
+        r"\*\*\(?([ABCD])\)?\*\*",
+    ]
+    hits: list[tuple[int, str]] = []
+    for pattern in declarations:
+        hits += [(m.start(), m.group(1)) for m in re.finditer(pattern, up)]
+    if hits:
+        return max(hits, key=lambda h: h[0])[1]  # last explicit declaration wins
     m = re.match(r"^\(?\s*([ABCD])\b", up)
     if m:
         return m.group(1)
-    m = re.search(r"ANSWER\s*(?:IS|:|=)?\s*\(?([ABCD])\b", up)
-    if m:
-        return m.group(1)
-    m = re.search(r"\bOPTION\s*\(?([ABCD])\b", up)
-    if m:
-        return m.group(1)
     found = re.findall(r"\b([ABCD])\b", up)
-    if len(set(found)) == 1:
-        return found[0]
+    if found:
+        return found[-1]  # reasoning that ends on its chosen letter
     return None
 
 
