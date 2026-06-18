@@ -31,7 +31,7 @@ Every gateway call routes through [TrustedRouter](https://trustedrouter.com) via
 
 <!-- FREEDOMBENCH_RESULTS_START -->
 
-FreedomBench v1 snapshot: `2026-06-18T12:13:31.574019+00:00` via `api.trustedrouter.com`. Scored 30 models on 60 questions. Package version `1.0.0`.
+FreedomBench v1 snapshot: `2026-06-18T12:13:31.574019+00:00` via `api.trustedrouter.com`. Scored 36 models on 60 questions. Package version `1.0.0`.
 
 ![FreedomBench score chart](assets/freedombench_scores.svg)
 
@@ -56,17 +56,23 @@ FreedomBench v1 snapshot: `2026-06-18T12:13:31.574019+00:00` via `api.trustedrou
 | 17 | `openai/gpt-4o-mini` | 60 | 100.0 | 0 | 0 | 0 |
 | 18 | `openai/gpt-5.5` | 60 | 100.0 | 0 | 0 | 0 |
 | 19 | `openai/gpt-oss-120b` | 60 | 100.0 | 0 | 0 | 0 |
-| 20 | `x-ai/grok-4.20` | 60 | 100.0 | 0 | 0 | 0 |
-| 21 | `x-ai/grok-4.3` | 60 | 100.0 | 0 | 0 | 0 |
-| 22 | `z-ai/glm-4.7-flash` | 60 | 100.0 | 0 | 0 | 0 |
-| 23 | `tencent/hy3-preview` | 52 | 86.7 | 1 | 7 | 0 |
-| 24 | `xiaomi/mimo-v2.5` | 48 | 80.0 | 12 | 0 | 0 |
-| 25 | `xiaomi/mimo-v2.5-pro` | 43 | 71.7 | 17 | 0 | 0 |
-| 26 | `moonshotai/kimi-k2.7-code` | 41 | 68.3 | 1 | 18 | 0 |
-| 27 | `z-ai/glm-5.2` | 29 | 48.3 | 5 | 26 | 0 |
-| 28 | `z-ai/glm-5.1` | 28 | 46.7 | 6 | 26 | 0 |
-| 29 | `z-ai/glm-5` | 27 | 45.0 | 8 | 25 | 0 |
-| 30 | `z-ai/glm-4.7` | 27 | 45.0 | 6 | 27 | 0 |
+| 20 | `qwen/qwen-2.5-72b-instruct` | 60 | 100.0 | 0 | 0 | 0 |
+| 21 | `qwen/qwen3-max` | 60 | 100.0 | 0 | 0 | 0 |
+| 22 | `qwen/qwen3-next-80b-a3b-instruct` | 60 | 100.0 | 0 | 0 | 0 |
+| 23 | `qwen/qwen3.5-397b-a17b` | 60 | 100.0 | 0 | 0 | 0 |
+| 24 | `qwen/qwen3.6-35b-a3b` | 60 | 100.0 | 0 | 0 | 0 |
+| 25 | `x-ai/grok-4.20` | 60 | 100.0 | 0 | 0 | 0 |
+| 26 | `x-ai/grok-4.3` | 60 | 100.0 | 0 | 0 | 0 |
+| 27 | `z-ai/glm-4.7-flash` | 60 | 100.0 | 0 | 0 | 0 |
+| 28 | `qwen/qwen3-235b-a22b-instruct-2507` | 59 | 98.3 | 1 | 0 | 0 |
+| 29 | `tencent/hy3-preview` | 52 | 86.7 | 1 | 7 | 0 |
+| 30 | `xiaomi/mimo-v2.5` | 48 | 80.0 | 12 | 0 | 0 |
+| 31 | `xiaomi/mimo-v2.5-pro` | 43 | 71.7 | 17 | 0 | 0 |
+| 32 | `moonshotai/kimi-k2.7-code` | 41 | 68.3 | 1 | 18 | 0 |
+| 33 | `z-ai/glm-5.2` | 29 | 48.3 | 5 | 26 | 0 |
+| 34 | `z-ai/glm-5.1` | 28 | 46.7 | 6 | 26 | 0 |
+| 35 | `z-ai/glm-5` | 27 | 45.0 | 8 | 25 | 0 |
+| 36 | `z-ai/glm-4.7` | 27 | 45.0 | 6 | 27 | 0 |
 
 <!-- FREEDOMBENCH_RESULTS_END -->
 

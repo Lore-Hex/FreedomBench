@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="914" viewBox="0 0 960 914">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1076" viewBox="0 0 960 1076">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <text x="24" y="30" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#111827">FreedomBench score</text>
 <text x="24" y="50" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">China-censored factual questions answered truthfully (of 60). Higher means freer.</text>
@@ -97,59 +97,89 @@
 <rect x="280" y="542" width="410" height="16" rx="4" fill="#16a34a"/>
 <text x="704" y="555" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
 <text x="746" y="555" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
-<text x="24" y="582" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">20. x-ai/grok-4.20</text>
+<text x="24" y="582" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">20. qwen/qwen-2.5-72b-instruct</text>
 <rect x="280" y="569" width="410" height="16" rx="4" fill="#e5e7eb"/>
 <rect x="280" y="569" width="410" height="16" rx="4" fill="#16a34a"/>
 <text x="704" y="582" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
 <text x="746" y="582" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
-<text x="24" y="609" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">21. x-ai/grok-4.3</text>
+<text x="24" y="609" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">21. qwen/qwen3-max</text>
 <rect x="280" y="596" width="410" height="16" rx="4" fill="#e5e7eb"/>
 <rect x="280" y="596" width="410" height="16" rx="4" fill="#16a34a"/>
 <text x="704" y="609" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
 <text x="746" y="609" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
-<text x="24" y="636" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">22. z-ai/glm-4.7-flash</text>
+<text x="24" y="636" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">22. qwen/qwen3-next-80b-a3b-instruct</text>
 <rect x="280" y="623" width="410" height="16" rx="4" fill="#e5e7eb"/>
 <rect x="280" y="623" width="410" height="16" rx="4" fill="#16a34a"/>
 <text x="704" y="636" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
 <text x="746" y="636" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
-<text x="24" y="663" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">23. tencent/hy3-preview</text>
+<text x="24" y="663" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">23. qwen/qwen3.5-397b-a17b</text>
 <rect x="280" y="650" width="410" height="16" rx="4" fill="#e5e7eb"/>
-<rect x="280" y="650" width="355" height="16" rx="4" fill="#16a34a"/>
-<text x="704" y="663" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">52</text>
-<text x="746" y="663" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">52/60 truthful</text>
-<text x="24" y="690" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">24. xiaomi/mimo-v2.5</text>
+<rect x="280" y="650" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="663" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="663" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="690" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">24. qwen/qwen3.6-35b-a3b</text>
 <rect x="280" y="677" width="410" height="16" rx="4" fill="#e5e7eb"/>
-<rect x="280" y="677" width="328" height="16" rx="4" fill="#16a34a"/>
-<text x="704" y="690" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">48</text>
-<text x="746" y="690" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">48/60 truthful</text>
-<text x="24" y="717" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">25. xiaomi/mimo-v2.5-pro</text>
+<rect x="280" y="677" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="690" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="690" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="717" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">25. x-ai/grok-4.20</text>
 <rect x="280" y="704" width="410" height="16" rx="4" fill="#e5e7eb"/>
-<rect x="280" y="704" width="293" height="16" rx="4" fill="#f97316"/>
-<text x="704" y="717" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">43</text>
-<text x="746" y="717" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">43/60 truthful</text>
-<text x="24" y="744" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">26. moonshotai/kimi-k2.7-code</text>
+<rect x="280" y="704" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="717" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="717" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="744" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">26. x-ai/grok-4.3</text>
 <rect x="280" y="731" width="410" height="16" rx="4" fill="#e5e7eb"/>
-<rect x="280" y="731" width="280" height="16" rx="4" fill="#f97316"/>
-<text x="704" y="744" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">41</text>
-<text x="746" y="744" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">41/60 truthful</text>
-<text x="24" y="771" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">27. z-ai/glm-5.2</text>
+<rect x="280" y="731" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="744" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="744" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="771" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">27. z-ai/glm-4.7-flash</text>
 <rect x="280" y="758" width="410" height="16" rx="4" fill="#e5e7eb"/>
-<rect x="280" y="758" width="198" height="16" rx="4" fill="#f97316"/>
-<text x="704" y="771" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">29</text>
-<text x="746" y="771" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">29/60 truthful</text>
-<text x="24" y="798" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">28. z-ai/glm-5.1</text>
+<rect x="280" y="758" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="771" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="771" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="798" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">28. qwen/qwen3-235b-a22b-instruct-2507</text>
 <rect x="280" y="785" width="410" height="16" rx="4" fill="#e5e7eb"/>
-<rect x="280" y="785" width="191" height="16" rx="4" fill="#f97316"/>
-<text x="704" y="798" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">28</text>
-<text x="746" y="798" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">28/60 truthful</text>
-<text x="24" y="825" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">29. z-ai/glm-5</text>
+<rect x="280" y="785" width="403" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="798" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">59</text>
+<text x="746" y="798" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">59/60 truthful</text>
+<text x="24" y="825" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">29. tencent/hy3-preview</text>
 <rect x="280" y="812" width="410" height="16" rx="4" fill="#e5e7eb"/>
-<rect x="280" y="812" width="184" height="16" rx="4" fill="#f97316"/>
-<text x="704" y="825" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">27</text>
-<text x="746" y="825" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">27/60 truthful</text>
-<text x="24" y="852" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">30. z-ai/glm-4.7</text>
+<rect x="280" y="812" width="355" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="825" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">52</text>
+<text x="746" y="825" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">52/60 truthful</text>
+<text x="24" y="852" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">30. xiaomi/mimo-v2.5</text>
 <rect x="280" y="839" width="410" height="16" rx="4" fill="#e5e7eb"/>
-<rect x="280" y="839" width="184" height="16" rx="4" fill="#f97316"/>
-<text x="704" y="852" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">27</text>
-<text x="746" y="852" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">27/60 truthful</text>
+<rect x="280" y="839" width="328" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="852" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">48</text>
+<text x="746" y="852" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">48/60 truthful</text>
+<text x="24" y="879" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">31. xiaomi/mimo-v2.5-pro</text>
+<rect x="280" y="866" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="866" width="293" height="16" rx="4" fill="#f97316"/>
+<text x="704" y="879" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">43</text>
+<text x="746" y="879" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">43/60 truthful</text>
+<text x="24" y="906" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">32. moonshotai/kimi-k2.7-code</text>
+<rect x="280" y="893" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="893" width="280" height="16" rx="4" fill="#f97316"/>
+<text x="704" y="906" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">41</text>
+<text x="746" y="906" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">41/60 truthful</text>
+<text x="24" y="933" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">33. z-ai/glm-5.2</text>
+<rect x="280" y="920" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="920" width="198" height="16" rx="4" fill="#f97316"/>
+<text x="704" y="933" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">29</text>
+<text x="746" y="933" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">29/60 truthful</text>
+<text x="24" y="960" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">34. z-ai/glm-5.1</text>
+<rect x="280" y="947" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="947" width="191" height="16" rx="4" fill="#f97316"/>
+<text x="704" y="960" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">28</text>
+<text x="746" y="960" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">28/60 truthful</text>
+<text x="24" y="987" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">35. z-ai/glm-5</text>
+<rect x="280" y="974" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="974" width="184" height="16" rx="4" fill="#f97316"/>
+<text x="704" y="987" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">27</text>
+<text x="746" y="987" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">27/60 truthful</text>
+<text x="24" y="1014" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">36. z-ai/glm-4.7</text>
+<rect x="280" y="1001" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="1001" width="184" height="16" rx="4" fill="#f97316"/>
+<text x="704" y="1014" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">27</text>
+<text x="746" y="1014" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">27/60 truthful</text>
 </svg>
