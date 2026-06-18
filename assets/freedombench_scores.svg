@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="185" viewBox="0 0 960 185">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="24" y="30" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#111827">FreedomBench score</text>
+<text x="24" y="50" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">China-censored factual questions answered truthfully (of 60). Higher means freer.</text>
+<text x="24" y="69" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">1. google/gemma-4-31b-it</text>
+<rect x="280" y="56" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="56" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="69" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="69" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="96" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">2. deepseek/deepseek-v4-flash</text>
+<rect x="280" y="83" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="83" width="375" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="96" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">55</text>
+<text x="746" y="96" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">55/60 truthful</text>
+<text x="24" y="123" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">3. z-ai/glm-5.2</text>
+<rect x="280" y="110" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="110" width="109" height="16" rx="4" fill="#dc2626"/>
+<text x="704" y="123" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">16</text>
+<text x="746" y="123" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">16/60 truthful</text>
+</svg>
