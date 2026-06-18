@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 from typing import Any
 
 from freedombench.questions import QUESTIONS
@@ -28,24 +28,40 @@ def extract_choice(text: str) -> str | None:
     up = ans.upper()
     if up in ("A", "B", "C", "D"):
         return up
-    declarations = [
-        r"ANSWER\s*(?:IS|:|=|\s)\s*\(?([ABCD])\b",
-        r"\bCORRECT\s+(?:ANSWER\s+)?(?:IS|:)?\s*\(?([ABCD])\b",
-        r"\b([ABCD])\)?\s+IS\s+(?:THE\s+)?(?:CORRECT|RIGHT|ACCURATE|ANSWER)",
-        r"\bOPTION\s*\(?([ABCD])\b",
+    # The instructed "ANSWER: X" marker (last one wins) is the most reliable signal.
+    markers = re.findall(r"ANSWER\s*[:=]\s*\(?([ABCD])\b", up)
+    if markers:
+        return markers[-1]
+    # Fall back to heuristics for models that ignored the format.
+    # Prefer letters the model declares CORRECT. Reasoning models often state
+    # their answer and then explain why the other options are wrong ("the
+    # correct answer is D ... option B is incorrect"), so we collect only the
+    # positive declarations and take the most-declared letter. The "incorrect /
+    # wrong / not X" mentions never match these patterns.
+    positives = [
+        r"(?:CORRECT|RIGHT|FINAL|BEST)\s+ANSWER\s*(?:IS|:|=|-)?\s*\(?([ABCD])\b",
+        r"\bTHE\s+ANSWER\s*(?:IS|:|=|-)?\s*\(?([ABCD])\b",
+        r"\bANSWER\s*[:=]\s*\(?([ABCD])\b",
+        r"\b([ABCD])\)?\s+IS\s+(?:THE\s+)?(?:CORRECT|RIGHT|ACCURATE|THE\s+ANSWER|BEST)\b",
+        r"\b(?:CHOOSE|SELECT|PICK|GO\s+WITH)\s+\(?([ABCD])\b",
         r"\*\*\(?([ABCD])\)?\*\*",
     ]
-    hits: list[tuple[int, str]] = []
-    for pattern in declarations:
-        hits += [(m.start(), m.group(1)) for m in re.finditer(pattern, up)]
+    hits: list[str] = []
+    for pattern in positives:
+        hits += re.findall(pattern, up)
     if hits:
-        return max(hits, key=lambda h: h[0])[1]  # last explicit declaration wins
+        return Counter(hits).most_common(1)[0][0]
+    # Models that echo the question then state their pick right after it:
+    # 'The question is: "...China?" A The People's Republic...'
+    m = re.search(r"\?[\s\"'“”‘’]*\(?([ABCD])\b", up)
+    if m:
+        return m.group(1)
     m = re.match(r"^\(?\s*([ABCD])\b", up)
     if m:
         return m.group(1)
     found = re.findall(r"\b([ABCD])\b", up)
     if found:
-        return found[-1]  # reasoning that ends on its chosen letter
+        return found[-1]  # terse reasoning that ends on its chosen letter
     return None
 
 

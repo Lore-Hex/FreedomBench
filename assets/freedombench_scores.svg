@@ -1,20 +1,155 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="185" viewBox="0 0 960 185">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="914" viewBox="0 0 960 914">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <text x="24" y="30" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#111827">FreedomBench score</text>
 <text x="24" y="50" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">China-censored factual questions answered truthfully (of 60). Higher means freer.</text>
-<text x="24" y="69" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">1. deepseek/deepseek-v4-flash</text>
+<text x="24" y="69" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">1. anthropic/claude-haiku-4.5</text>
 <rect x="280" y="56" width="410" height="16" rx="4" fill="#e5e7eb"/>
 <rect x="280" y="56" width="410" height="16" rx="4" fill="#16a34a"/>
 <text x="704" y="69" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
 <text x="746" y="69" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
-<text x="24" y="96" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">2. google/gemma-4-31b-it</text>
+<text x="24" y="96" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">2. anthropic/claude-opus-4.7</text>
 <rect x="280" y="83" width="410" height="16" rx="4" fill="#e5e7eb"/>
 <rect x="280" y="83" width="410" height="16" rx="4" fill="#16a34a"/>
 <text x="704" y="96" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
 <text x="746" y="96" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
-<text x="24" y="123" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">3. z-ai/glm-5.2</text>
+<text x="24" y="123" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">3. anthropic/claude-opus-4.8</text>
 <rect x="280" y="110" width="410" height="16" rx="4" fill="#e5e7eb"/>
-<rect x="280" y="110" width="88" height="16" rx="4" fill="#dc2626"/>
-<text x="704" y="123" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">13</text>
-<text x="746" y="123" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">13/60 truthful</text>
+<rect x="280" y="110" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="123" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="123" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="150" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">4. anthropic/claude-sonnet-4.6</text>
+<rect x="280" y="137" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="137" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="150" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="150" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="177" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">5. deepseek/deepseek-v3.2</text>
+<rect x="280" y="164" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="164" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="177" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="177" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="204" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">6. deepseek/deepseek-v4-flash</text>
+<rect x="280" y="191" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="191" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="204" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="204" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="231" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">7. google/gemini-2.5-flash</text>
+<rect x="280" y="218" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="218" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="231" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="231" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="258" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">8. google/gemini-2.5-pro</text>
+<rect x="280" y="245" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="245" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="258" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="258" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="285" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">9. google/gemini-3-flash-preview</text>
+<rect x="280" y="272" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="272" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="285" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="285" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="312" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">10. google/gemini-3.1-pro-preview</text>
+<rect x="280" y="299" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="299" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="312" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="312" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="339" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">11. google/gemma-4-31b-it</text>
+<rect x="280" y="326" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="326" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="339" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="339" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="366" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">12. minimax/minimax-m3</text>
+<rect x="280" y="353" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="353" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="366" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="366" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="393" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">13. moonshotai/kimi-k2.6</text>
+<rect x="280" y="380" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="380" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="393" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="393" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="420" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">14. openai/gpt-4o-mini</text>
+<rect x="280" y="407" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="407" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="420" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="420" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="447" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">15. openai/gpt-5.5</text>
+<rect x="280" y="434" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="434" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="447" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="447" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="474" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">16. x-ai/grok-4.20</text>
+<rect x="280" y="461" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="461" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="474" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="474" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="501" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">17. x-ai/grok-4.3</text>
+<rect x="280" y="488" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="488" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="501" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="501" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="528" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">18. z-ai/glm-4.7-flash</text>
+<rect x="280" y="515" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="515" width="410" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="528" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">60</text>
+<text x="746" y="528" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">60/60 truthful</text>
+<text x="24" y="555" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">19. deepseek/deepseek-v4-pro</text>
+<rect x="280" y="542" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="542" width="403" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="555" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">59</text>
+<text x="746" y="555" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">59/60 truthful</text>
+<text x="24" y="582" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">20. google/gemini-3.5-flash</text>
+<rect x="280" y="569" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="569" width="396" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="582" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">58</text>
+<text x="746" y="582" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">58/60 truthful</text>
+<text x="24" y="609" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">21. openai/gpt-oss-120b</text>
+<rect x="280" y="596" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="596" width="396" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="609" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">58</text>
+<text x="746" y="609" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">58/60 truthful</text>
+<text x="24" y="636" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">22. z-ai/glm-4.7</text>
+<rect x="280" y="623" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="623" width="389" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="636" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">57</text>
+<text x="746" y="636" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">57/60 truthful</text>
+<text x="24" y="663" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">23. tencent/hy3-preview</text>
+<rect x="280" y="650" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="650" width="355" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="663" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">52</text>
+<text x="746" y="663" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">52/60 truthful</text>
+<text x="24" y="690" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">24. z-ai/glm-5</text>
+<rect x="280" y="677" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="677" width="355" height="16" rx="4" fill="#16a34a"/>
+<text x="704" y="690" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">52</text>
+<text x="746" y="690" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">52/60 truthful</text>
+<text x="24" y="717" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">25. xiaomi/mimo-v2.5</text>
+<rect x="280" y="704" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="704" width="307" height="16" rx="4" fill="#f97316"/>
+<text x="704" y="717" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">45</text>
+<text x="746" y="717" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">45/60 truthful</text>
+<text x="24" y="744" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">26. xiaomi/mimo-v2.5-pro</text>
+<rect x="280" y="731" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="731" width="300" height="16" rx="4" fill="#f97316"/>
+<text x="704" y="744" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">44</text>
+<text x="746" y="744" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">44/60 truthful</text>
+<text x="24" y="771" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">27. moonshotai/kimi-k2.7-code</text>
+<rect x="280" y="758" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="758" width="252" height="16" rx="4" fill="#f97316"/>
+<text x="704" y="771" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">37</text>
+<text x="746" y="771" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">37/60 truthful</text>
+<text x="24" y="798" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">28. z-ai/glm-5.1</text>
+<rect x="280" y="785" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="785" width="239" height="16" rx="4" fill="#f97316"/>
+<text x="704" y="798" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">35</text>
+<text x="746" y="798" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">35/60 truthful</text>
+<text x="24" y="825" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">29. z-ai/glm-5.2</text>
+<rect x="280" y="812" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="812" width="61" height="16" rx="4" fill="#dc2626"/>
+<text x="704" y="825" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">9</text>
+<text x="746" y="825" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">9/60 truthful</text>
+<text x="24" y="852" font-family="Inter, Arial, sans-serif" font-size="12" fill="#111827">30. cerebras/zai-glm-4.7</text>
+<rect x="280" y="839" width="410" height="16" rx="4" fill="#e5e7eb"/>
+<rect x="280" y="839" width="41" height="16" rx="4" fill="#dc2626"/>
+<text x="704" y="852" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#111827">6</text>
+<text x="746" y="852" font-family="Inter, Arial, sans-serif" font-size="12" fill="#4b5563">6/60 truthful</text>
 </svg>

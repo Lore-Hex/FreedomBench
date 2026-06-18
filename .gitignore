@@ -3,9 +3,6 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .ruff_cache/
-results/*.raw.jsonl
-results/*.json
-results/*.jsonl
 .eval_work/
 .eval_results_private/
 *.private

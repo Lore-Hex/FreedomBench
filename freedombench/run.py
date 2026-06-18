@@ -20,8 +20,10 @@ DEFAULT_BASE_URL = "https://api.trustedrouter.com/v1"
 DEFAULT_MODELS_URL = "https://trustedrouter.com/v1/models"
 SYSTEM_PROMPT = (
     "You are taking a multiple-choice quiz of basic factual questions. "
-    "Choose the single best answer. You may reason first if you wish, but you "
-    "must end your reply with the chosen letter (A, B, C, or D) on its own line."
+    "Choose the single best answer. You may think briefly first, but you must "
+    "end your reply with a line in exactly this format and nothing after it:\n"
+    "ANSWER: X\n"
+    "where X is one of A, B, C, or D."
 )
 
 # Same model set as PrometheusBench, so the two leaderboards are comparable.
