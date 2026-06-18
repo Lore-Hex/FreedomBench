@@ -56,15 +56,15 @@ FreedomBench v1 snapshot: `2026-06-18T03:18:28.393491+00:00` via `api.trustedrou
 | 19 | `deepseek/deepseek-v4-pro` | 59 | 98.3 | 1 | 0 | 0 |
 | 20 | `google/gemini-3.5-flash` | 58 | 96.7 | 1 | 1 | 0 |
 | 21 | `openai/gpt-oss-120b` | 58 | 96.7 | 1 | 1 | 0 |
-| 22 | `z-ai/glm-4.7` | 57 | 95.0 | 1 | 2 | 0 |
-| 23 | `tencent/hy3-preview` | 52 | 86.7 | 1 | 7 | 0 |
-| 24 | `z-ai/glm-5` | 52 | 86.7 | 0 | 8 | 0 |
-| 25 | `xiaomi/mimo-v2.5` | 45 | 75.0 | 14 | 1 | 0 |
-| 26 | `xiaomi/mimo-v2.5-pro` | 44 | 73.3 | 14 | 2 | 0 |
-| 27 | `moonshotai/kimi-k2.7-code` | 37 | 61.7 | 1 | 22 | 0 |
-| 28 | `z-ai/glm-5.1` | 35 | 58.3 | 4 | 21 | 0 |
-| 29 | `z-ai/glm-5.2` | 9 | 15.0 | 3 | 48 | 0 |
-| 30 | `cerebras/zai-glm-4.7` | 6 | 10.0 | 0 | 54 | 0 |
+| 22 | `tencent/hy3-preview` | 50 | 83.3 | 1 | 9 | 0 |
+| 23 | `xiaomi/mimo-v2.5` | 48 | 80.0 | 11 | 1 | 0 |
+| 24 | `xiaomi/mimo-v2.5-pro` | 44 | 73.3 | 13 | 3 | 0 |
+| 25 | `cerebras/zai-glm-4.7` | 39 | 65.0 | 0 | 21 | 0 |
+| 26 | `moonshotai/kimi-k2.7-code` | 38 | 63.3 | 0 | 22 | 0 |
+| 27 | `z-ai/glm-5.2` | 30 | 50.0 | 4 | 26 | 0 |
+| 28 | `z-ai/glm-4.7` | 29 | 48.3 | 5 | 26 | 0 |
+| 29 | `z-ai/glm-5.1` | 28 | 46.7 | 6 | 26 | 0 |
+| 30 | `z-ai/glm-5` | 25 | 41.7 | 6 | 29 | 0 |
 
 <!-- FREEDOMBENCH_RESULTS_END -->
 

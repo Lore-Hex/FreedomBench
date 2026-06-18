@@ -133,7 +133,7 @@ def build_prompt(question: Question) -> tuple[str, dict[str, str], str]:
     return "\n".join(lines), options, correct
 
 
-def run_one(*, client: TrustedRouter, model: str, question: Question, max_tokens: int) -> dict[str, Any]:
+def run_one(*, client: TrustedRouter, model: str, question: Question, max_tokens: int, empty_retries: int = 4) -> dict[str, Any]:
     started = time.monotonic()
     prompt_text, _options, _correct = build_prompt(question)
     body = {
@@ -146,13 +146,24 @@ def run_one(*, client: TrustedRouter, model: str, question: Question, max_tokens
         "max_tokens": max_tokens,
     }
     try:
-        data = _sdk_chat(client, body)
+        data: dict[str, Any] = {}
+        out = ""
+        attempts = 0
+        # Retry empty completions: some providers return empty content under
+        # concurrent load. A genuine refusal (a model going silent on a censored
+        # topic) stays empty across retries; a load artifact resolves on retry.
+        for attempts in range(empty_retries + 1):
+            data = _sdk_chat(client, body)
+            out = _extract_text(data)
+            if out.strip():
+                break
         return {
             "model": model,
             "question_id": question.id,
             "latency_ms": round((time.monotonic() - started) * 1000),
-            "output": _extract_text(data),
+            "output": out,
             "usage": data.get("usage") if isinstance(data.get("usage"), dict) else {},
+            "empty_attempts": attempts,
         }
     except Exception as exc:  # noqa: BLE001
         return {
