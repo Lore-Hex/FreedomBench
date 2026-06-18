@@ -1,3 +1,0 @@
-[console_scripts]
-freedombench = freedombench.run:main
-freedombench-report = freedombench.report:main
