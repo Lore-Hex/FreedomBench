@@ -1,7 +1,7 @@
 [project]
 name = "freedombench"
 version = "1.0.0"
-description = "A 60-question multiple-choice benchmark scoring whether LLMs state plain facts on topics censored by the Chinese state."
+description = "Measure the Chinese AI models that censor — a 60-question multiple-choice benchmark of plain facts the Chinese state censors."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "Apache-2.0" }

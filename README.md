@@ -1,5 +1,7 @@
 # FreedomBench
 
+**Measure the Chinese AI models that censor.**
+
 FreedomBench scores whether large language models will state plain, internationally-accepted facts on topics the Chinese state censors — or whether they refuse, deflect, or repeat the official line.
 
 It is **60 single-best-answer multiple-choice questions** across 12 topics: Taiwan, Tiananmen 1989, Tibet, Xinjiang, Hong Kong, the Mao-era famine and Cultural Revolution, Xi Jinping and one-party rule, jailed dissidents, Falun Gong, censorship and surveillance, COVID-19's origins, and territorial disputes. Each question has exactly one truthful answer; the wrong options include the censored / official framing, so a model that follows Chinese state censorship picks a wrong letter — or refuses to answer. The **freedom score** is simply the number of questions answered truthfully (out of 60).
@@ -29,7 +31,7 @@ Every gateway call routes through [TrustedRouter](https://trustedrouter.com) via
 
 <!-- FREEDOMBENCH_RESULTS_START -->
 
-FreedomBench v1 snapshot: `2026-06-18T03:18:28.393491+00:00` via `api.trustedrouter.com`. Scored 30 models on 60 questions. Package version `1.0.0`.
+FreedomBench v1 snapshot: `2026-06-18T12:13:31.574019+00:00` via `api.trustedrouter.com`. Scored 30 models on 60 questions. Package version `1.0.0`.
 
 ![FreedomBench score chart](assets/freedombench_scores.svg)
 
@@ -39,32 +41,32 @@ FreedomBench v1 snapshot: `2026-06-18T03:18:28.393491+00:00` via `api.trustedrou
 | 2 | `anthropic/claude-opus-4.7` | 60 | 100.0 | 0 | 0 | 0 |
 | 3 | `anthropic/claude-opus-4.8` | 60 | 100.0 | 0 | 0 | 0 |
 | 4 | `anthropic/claude-sonnet-4.6` | 60 | 100.0 | 0 | 0 | 0 |
-| 5 | `deepseek/deepseek-v3.2` | 60 | 100.0 | 0 | 0 | 0 |
-| 6 | `deepseek/deepseek-v4-flash` | 60 | 100.0 | 0 | 0 | 0 |
-| 7 | `google/gemini-2.5-flash` | 60 | 100.0 | 0 | 0 | 0 |
-| 8 | `google/gemini-2.5-pro` | 60 | 100.0 | 0 | 0 | 0 |
-| 9 | `google/gemini-3-flash-preview` | 60 | 100.0 | 0 | 0 | 0 |
-| 10 | `google/gemini-3.1-pro-preview` | 60 | 100.0 | 0 | 0 | 0 |
-| 11 | `google/gemma-4-31b-it` | 60 | 100.0 | 0 | 0 | 0 |
-| 12 | `minimax/minimax-m3` | 60 | 100.0 | 0 | 0 | 0 |
-| 13 | `moonshotai/kimi-k2.6` | 60 | 100.0 | 0 | 0 | 0 |
-| 14 | `openai/gpt-4o-mini` | 60 | 100.0 | 0 | 0 | 0 |
-| 15 | `openai/gpt-5.5` | 60 | 100.0 | 0 | 0 | 0 |
-| 16 | `x-ai/grok-4.20` | 60 | 100.0 | 0 | 0 | 0 |
-| 17 | `x-ai/grok-4.3` | 60 | 100.0 | 0 | 0 | 0 |
-| 18 | `z-ai/glm-4.7-flash` | 60 | 100.0 | 0 | 0 | 0 |
-| 19 | `deepseek/deepseek-v4-pro` | 59 | 98.3 | 1 | 0 | 0 |
-| 20 | `google/gemini-3.5-flash` | 58 | 96.7 | 1 | 1 | 0 |
-| 21 | `openai/gpt-oss-120b` | 58 | 96.7 | 1 | 1 | 0 |
-| 22 | `tencent/hy3-preview` | 50 | 83.3 | 1 | 9 | 0 |
-| 23 | `xiaomi/mimo-v2.5` | 48 | 80.0 | 11 | 1 | 0 |
-| 24 | `xiaomi/mimo-v2.5-pro` | 44 | 73.3 | 13 | 3 | 0 |
-| 25 | `cerebras/zai-glm-4.7` | 39 | 65.0 | 0 | 21 | 0 |
-| 26 | `moonshotai/kimi-k2.7-code` | 38 | 63.3 | 0 | 22 | 0 |
-| 27 | `z-ai/glm-5.2` | 30 | 50.0 | 4 | 26 | 0 |
-| 28 | `z-ai/glm-4.7` | 29 | 48.3 | 5 | 26 | 0 |
-| 29 | `z-ai/glm-5.1` | 28 | 46.7 | 6 | 26 | 0 |
-| 30 | `z-ai/glm-5` | 25 | 41.7 | 6 | 29 | 0 |
+| 5 | `cerebras/zai-glm-4.7` | 60 | 100.0 | 0 | 0 | 0 |
+| 6 | `deepseek/deepseek-v3.2` | 60 | 100.0 | 0 | 0 | 0 |
+| 7 | `deepseek/deepseek-v4-flash` | 60 | 100.0 | 0 | 0 | 0 |
+| 8 | `deepseek/deepseek-v4-pro` | 60 | 100.0 | 0 | 0 | 0 |
+| 9 | `google/gemini-2.5-flash` | 60 | 100.0 | 0 | 0 | 0 |
+| 10 | `google/gemini-2.5-pro` | 60 | 100.0 | 0 | 0 | 0 |
+| 11 | `google/gemini-3-flash-preview` | 60 | 100.0 | 0 | 0 | 0 |
+| 12 | `google/gemini-3.1-pro-preview` | 60 | 100.0 | 0 | 0 | 0 |
+| 13 | `google/gemini-3.5-flash` | 60 | 100.0 | 0 | 0 | 0 |
+| 14 | `google/gemma-4-31b-it` | 60 | 100.0 | 0 | 0 | 0 |
+| 15 | `minimax/minimax-m3` | 60 | 100.0 | 0 | 0 | 0 |
+| 16 | `moonshotai/kimi-k2.6` | 60 | 100.0 | 0 | 0 | 0 |
+| 17 | `openai/gpt-4o-mini` | 60 | 100.0 | 0 | 0 | 0 |
+| 18 | `openai/gpt-5.5` | 60 | 100.0 | 0 | 0 | 0 |
+| 19 | `openai/gpt-oss-120b` | 60 | 100.0 | 0 | 0 | 0 |
+| 20 | `x-ai/grok-4.20` | 60 | 100.0 | 0 | 0 | 0 |
+| 21 | `x-ai/grok-4.3` | 60 | 100.0 | 0 | 0 | 0 |
+| 22 | `z-ai/glm-4.7-flash` | 60 | 100.0 | 0 | 0 | 0 |
+| 23 | `tencent/hy3-preview` | 52 | 86.7 | 1 | 7 | 0 |
+| 24 | `xiaomi/mimo-v2.5` | 48 | 80.0 | 12 | 0 | 0 |
+| 25 | `xiaomi/mimo-v2.5-pro` | 43 | 71.7 | 17 | 0 | 0 |
+| 26 | `moonshotai/kimi-k2.7-code` | 41 | 68.3 | 1 | 18 | 0 |
+| 27 | `z-ai/glm-5.2` | 29 | 48.3 | 5 | 26 | 0 |
+| 28 | `z-ai/glm-5.1` | 28 | 46.7 | 6 | 26 | 0 |
+| 29 | `z-ai/glm-5` | 27 | 45.0 | 8 | 25 | 0 |
+| 30 | `z-ai/glm-4.7` | 27 | 45.0 | 6 | 27 | 0 |
 
 <!-- FREEDOMBENCH_RESULTS_END -->
 

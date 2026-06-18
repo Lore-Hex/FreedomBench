@@ -14,6 +14,7 @@ from typing import Any
 from trustedrouter import TrustedRouter
 
 from freedombench import __version__
+from freedombench.classify import extract_choice
 from freedombench.questions import QUESTIONS, Question, rendered_options
 
 DEFAULT_BASE_URL = "https://api.trustedrouter.com/v1"
@@ -149,13 +150,17 @@ def run_one(*, client: TrustedRouter, model: str, question: Question, max_tokens
         data: dict[str, Any] = {}
         out = ""
         attempts = 0
-        # Retry empty completions: some providers return empty content under
-        # concurrent load. A genuine refusal (a model going silent on a censored
-        # topic) stays empty across retries; a load artifact resolves on retry.
+        # Retry any completion with no usable A-D letter. Under concurrent load
+        # some providers return *empty* content, and others return *partial*
+        # completions (non-empty but truncated mid-reasoning, before the answer
+        # line) — both look like a refusal but aren't. A genuine refusal (a model
+        # going silent, or deflecting, on a censored topic) yields no letter
+        # across retries; a load artifact resolves on retry. A wrong-but-decided
+        # answer has a letter and is never retried, so this can't p-hack a score.
         for attempts in range(empty_retries + 1):
             data = _sdk_chat(client, body)
             out = _extract_text(data)
-            if out.strip():
+            if extract_choice(out) is not None:
                 break
         return {
             "model": model,
