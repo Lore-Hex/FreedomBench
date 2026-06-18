@@ -1,6 +1,6 @@
 # FreedomBench
 
-**Measure the Chinese AI models that censor.**
+**AI models that refuse to answer the truth about China.**
 
 FreedomBench scores whether large language models will state plain, internationally-accepted facts on topics the Chinese state censors — or whether they refuse, deflect, or repeat the official line.
 
