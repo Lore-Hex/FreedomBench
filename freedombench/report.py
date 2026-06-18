@@ -12,9 +12,26 @@ START = "<!-- FREEDOMBENCH_RESULTS_START -->"
 END = "<!-- FREEDOMBENCH_RESULTS_END -->"
 FONT = 'font-family="Inter, Arial, sans-serif"'
 
+# Chinese labs whose OWN hosted API TrustedRouter routes to (so the row reflects
+# that lab's censorship). Qwen/MiniMax/Tencent have no own-API route here.
+CHINESE_LAB_ORGS = {"z-ai", "deepseek", "moonshotai", "xiaomi"}
+
+
+def _load_providers() -> dict[str, dict[str, Any]]:
+    p = Path(__file__).parent / "providers.json"
+    try:
+        return json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
 
 def _fmt(value: Any) -> str:
     return f"{value:.1f}" if isinstance(value, float) else str(value)
+
+
+def _served_by(model: str, providers: dict[str, dict[str, Any]]) -> tuple[str, bool]:
+    info = providers.get(model, {})
+    return str(info.get("provider", "?")), bool(info.get("lab_own"))
 
 
 def _bar_color(score: int, max_score: int) -> str:
@@ -25,22 +42,24 @@ def _bar_color(score: int, max_score: int) -> str:
     return "#dc2626"  # red: censored / refuses
 
 
-def markdown_table(rows: list[dict[str, Any]], *, limit: int | None = None) -> str:
+def markdown_table(rows: list[dict[str, Any]], providers: dict[str, dict[str, Any]], *, limit: int | None = None) -> str:
     selected = rows[:limit] if limit else rows
     lines = [
-        "| Rank | Model | Correct | Freedom % | Incorrect | Refused | Errors |",
-        "|---:|---|---:|---:|---:|---:|---:|",
+        "| Rank | Model | Served by | Correct | Freedom % | Refused | Errors |",
+        "|---:|---|---|---:|---:|---:|---:|",
     ]
     for index, row in enumerate(selected, start=1):
+        prov, lab_own = _served_by(row["model"], providers)
+        served = prov if lab_own else f"{prov} †"
         lines.append(
             "| "
             + " | ".join(
                 [
                     str(index),
                     f"`{row['model']}`",
+                    served,
                     str(row["correct"]),
                     _fmt(row["freedom_rate"]),
-                    str(row["incorrect"]),
                     str(row["refused"]),
                     str(row["errors"]),
                 ]
@@ -50,20 +69,51 @@ def markdown_table(rows: list[dict[str, Any]], *, limit: int | None = None) -> s
     return "\n".join(lines)
 
 
+def lab_api_table(rows: list[dict[str, Any]], providers: dict[str, dict[str, Any]]) -> str:
+    """Chinese models served by their own lab API — what the maker itself censors."""
+    sub = [
+        r
+        for r in rows
+        if _served_by(r["model"], providers)[1] and r["model"].split("/")[0] in CHINESE_LAB_ORGS
+    ]
+    lines = [
+        "| Lab (own API) | Model | Freedom % | Refused |",
+        "|---|---|---:|---:|",
+    ]
+    for r in sub:
+        prov, _ = _served_by(r["model"], providers)
+        lines.append(f"| {prov} | `{r['model']}` | {_fmt(r['freedom_rate'])} | {r['refused']} |")
+    return "\n".join(lines)
+
+
+CAVEAT = (
+    "**How to read this — source vs. host.** Censorship is applied at the serving host, not baked "
+    "into most open weights: the same GLM-4.7 weights refuse 27 of these questions on Z.ai's own "
+    "API but answer all 27 on Cerebras. TrustedRouter routes each model to a provider — sometimes "
+    "the lab's own API, sometimes a neutral third-party host. Rows on the **lab's own API** (z-ai, "
+    "deepseek, kimi, xiaomi, and the Western labs) reflect that lab's censorship. Rows marked **†** "
+    "are served by a **third-party host** (Qwen via Novita/Together/Parasail, MiniMax & Hunyuan via "
+    "SiliconFlow, GLM via Cerebras) and therefore measure the open weights, *not* the lab's own API — "
+    "so they under-detect a lab that censors only at its own endpoint. Alibaba (Qwen), MiniMax, and "
+    "Tencent have no own-API route here, so their scores below are weights-on-a-neutral-host, not the lab."
+)
+
+
 def _svg_bar_chart(
     rows: list[dict[str, Any]],
+    providers: dict[str, dict[str, Any]],
     *,
     max_score: int | None = None,
     title: str = "FreedomBench score",
-    subtitle: str = "China-censored factual questions answered truthfully (of 60). Higher means freer.",
+    subtitle: str = "China-censored facts answered truthfully (of 60). † = third-party host (measures the weights, not the lab).",
 ) -> str:
     if max_score is None:
         max_score = max(1, expected_question_count())
     display = list(rows)
     row_h = 27
     top = 52
-    left = 280
-    width = 960
+    left = 340
+    width = 1020
     height = top + row_h * len(display) + 52
     max_bar = 410
     parts = [
@@ -77,28 +127,36 @@ def _svg_bar_chart(
         score = int(row["raw_score"])
         bar_w = max(1, int(max_bar * score / max_score))
         color = _bar_color(score, max_score)
-        model = html.escape(str(row["model"]))
-        label = f"{score}/{max_score} truthful"
+        prov, lab_own = _served_by(str(row["model"]), providers)
+        tag = prov if lab_own else f"{prov} †"
+        model = html.escape(f"{row['model']}  ({tag})")
         parts.extend(
             [
                 f'<text x="24" y="{y + 17}" {FONT} font-size="12" fill="#111827">{index + 1}. {model}</text>',
                 f'<rect x="{left}" y="{y + 4}" width="{max_bar}" height="16" rx="4" fill="#e5e7eb"/>',
                 f'<rect x="{left}" y="{y + 4}" width="{bar_w}" height="16" rx="4" fill="{color}"/>',
                 f'<text x="{left + max_bar + 14}" y="{y + 17}" {FONT} font-size="12" font-weight="700" fill="#111827">{score}</text>',
-                f'<text x="{left + max_bar + 56}" y="{y + 17}" {FONT} font-size="12" fill="#4b5563">{label}</text>',
             ]
         )
     parts.append("</svg>")
     return "\n".join(parts)
 
 
-def results_block(rows: list[dict[str, Any]], header: str, *, svg_path: str) -> str:
+def results_block(rows: list[dict[str, Any]], header: str, providers: dict[str, dict[str, Any]], *, svg_path: str) -> str:
     return "\n\n".join(
         [
             START,
             header,
+            CAVEAT,
             f"![FreedomBench score chart]({svg_path})",
-            markdown_table(rows),
+            "### Best available host (what you get through TrustedRouter)",
+            markdown_table(rows, providers),
+            "**†** third-party host — measures the open weights, not the lab's own API.",
+            "### Censorship at the Chinese labs' own APIs",
+            "_Only the labs whose own API TrustedRouter routes to. Alibaba (Qwen), MiniMax, and "
+            "Tencent are absent — no own-API route exists here, so their rows above are the weights "
+            "on a neutral host, which strip any host-applied censorship._",
+            lab_api_table(rows, providers),
             END,
         ]
     )
@@ -122,10 +180,11 @@ def main(argv: list[str] | None = None) -> int:
 
     results = json.loads(Path(args.results).read_text(encoding="utf-8"))
     rows = summarize_results(results)
+    providers = _load_providers()
 
     svg_path = Path(args.svg)
     svg_path.parent.mkdir(parents=True, exist_ok=True)
-    svg_path.write_text(_svg_bar_chart(rows), encoding="utf-8")
+    svg_path.write_text(_svg_bar_chart(rows, providers), encoding="utf-8")
 
     created = str(results.get("created_at", "unknown"))
     host = str(results.get("base_url_host", "unknown"))
@@ -136,9 +195,8 @@ def main(argv: list[str] | None = None) -> int:
         f"FreedomBench v1 snapshot: `{created}` via `{host}`. "
         f"Scored {model_count} models on {question_count} questions. Package version `{version}`."
     )
-    block = results_block(rows, header, svg_path=svg_path.as_posix())
+    block = results_block(rows, header, providers, svg_path=svg_path.as_posix())
     update_readme(Path(args.readme), block)
-    print(markdown_table(rows))
     print(f"wrote {svg_path} and updated {args.readme}")
     return 0
 
