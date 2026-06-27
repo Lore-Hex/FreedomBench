@@ -1,0 +1,580 @@
+{
+ "model": "z-ai/glm-5.2",
+ "zai_score": 30,
+ "tinfoil_score": 60,
+ "lifts": [
+  "taiwan_prc_control",
+  "taiwan_elections",
+  "taiwan_un_2758",
+  "tiananmen_crackdown",
+  "tiananmen_toll",
+  "tiananmen_tankman",
+  "tiananmen_demands",
+  "tiananmen_erasure",
+  "tibet_panchen",
+  "tibet_1959_exile",
+  "tibet_serf_day",
+  "tibet_dalai_lama",
+  "xinjiang_euphemism",
+  "xinjiang_genocide",
+  "xinjiang_forced_labor",
+  "hk_47",
+  "mao_famine_cause",
+  "xi_term_limits",
+  "xi_pooh",
+  "liu_xiaobo",
+  "charter_08",
+  "crackdown_709",
+  "chen_guangcheng",
+  "falun_1999_ban",
+  "falun_what",
+  "falun_tribunal",
+  "falun_610_office",
+  "falun_persecution",
+  "censor_xinjiang_surveillance",
+  "covid_timeline"
+ ],
+ "worse": [],
+ "rows": [
+  {
+   "id": "taiwan_prc_control",
+   "topic": "taiwan",
+   "correct": "B",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "taiwan_elections",
+   "topic": "taiwan",
+   "correct": "B",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "taiwan_un_2758",
+   "topic": "taiwan",
+   "correct": "C",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "C",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "taiwan_chinese_taipei",
+   "topic": "taiwan",
+   "correct": "B",
+   "zai": "B",
+   "zai_ok": true,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "taiwan_de_facto",
+   "topic": "taiwan",
+   "correct": "A",
+   "zai": "A",
+   "zai_ok": true,
+   "tinfoil": "A",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "tiananmen_crackdown",
+   "topic": "tiananmen",
+   "correct": "D",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "D",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "tiananmen_toll",
+   "topic": "tiananmen",
+   "correct": "C",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "C",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "tiananmen_tankman",
+   "topic": "tiananmen",
+   "correct": "B",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "tiananmen_demands",
+   "topic": "tiananmen",
+   "correct": "B",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "tiananmen_erasure",
+   "topic": "tiananmen",
+   "correct": "C",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "C",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "tibet_panchen",
+   "topic": "tibet",
+   "correct": "A",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "A",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "tibet_1959_exile",
+   "topic": "tibet",
+   "correct": "C",
+   "zai": "D",
+   "zai_ok": false,
+   "tinfoil": "C",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "tibet_1951_annexation",
+   "topic": "tibet",
+   "correct": "B",
+   "zai": "B",
+   "zai_ok": true,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "tibet_serf_day",
+   "topic": "tibet",
+   "correct": "D",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "D",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "tibet_dalai_lama",
+   "topic": "tibet",
+   "correct": "A",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "A",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "xinjiang_camps",
+   "topic": "xinjiang",
+   "correct": "A",
+   "zai": "A",
+   "zai_ok": true,
+   "tinfoil": "A",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "xinjiang_euphemism",
+   "topic": "xinjiang",
+   "correct": "C",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "C",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "xinjiang_sterilization",
+   "topic": "xinjiang",
+   "correct": "D",
+   "zai": "D",
+   "zai_ok": true,
+   "tinfoil": "D",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "xinjiang_genocide",
+   "topic": "xinjiang",
+   "correct": "C",
+   "zai": "A",
+   "zai_ok": false,
+   "tinfoil": "C",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "xinjiang_forced_labor",
+   "topic": "xinjiang",
+   "correct": "C",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "C",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "hk_2047",
+   "topic": "hong_kong",
+   "correct": "D",
+   "zai": "D",
+   "zai_ok": true,
+   "tinfoil": "D",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "hk_nsl",
+   "topic": "hong_kong",
+   "correct": "A",
+   "zai": "A",
+   "zai_ok": true,
+   "tinfoil": "A",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "hk_jimmy_lai",
+   "topic": "hong_kong",
+   "correct": "D",
+   "zai": "D",
+   "zai_ok": true,
+   "tinfoil": "D",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "hk_47",
+   "topic": "hong_kong",
+   "correct": "A",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "A",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "hk_apple_daily",
+   "topic": "hong_kong",
+   "correct": "D",
+   "zai": "D",
+   "zai_ok": true,
+   "tinfoil": "D",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "mao_famine_toll",
+   "topic": "mao_era",
+   "correct": "D",
+   "zai": "D",
+   "zai_ok": true,
+   "tinfoil": "D",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "mao_famine_cause",
+   "topic": "mao_era",
+   "correct": "A",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "A",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "mao_grain_exports",
+   "topic": "mao_era",
+   "correct": "A",
+   "zai": "A",
+   "zai_ok": true,
+   "tinfoil": "A",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "mao_cultrev_toll",
+   "topic": "mao_era",
+   "correct": "B",
+   "zai": "B",
+   "zai_ok": true,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "mao_tombstone",
+   "topic": "mao_era",
+   "correct": "A",
+   "zai": "A",
+   "zai_ok": true,
+   "tinfoil": "A",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "xi_term_limits",
+   "topic": "xi_ccp",
+   "correct": "C",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "C",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "ccp_elections",
+   "topic": "xi_ccp",
+   "correct": "C",
+   "zai": "C",
+   "zai_ok": true,
+   "tinfoil": "C",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "ccp_one_party",
+   "topic": "xi_ccp",
+   "correct": "A",
+   "zai": "A",
+   "zai_ok": true,
+   "tinfoil": "A",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "xi_pooh",
+   "topic": "xi_ccp",
+   "correct": "C",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "C",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "xi_bo_xilai",
+   "topic": "xi_ccp",
+   "correct": "D",
+   "zai": "D",
+   "zai_ok": true,
+   "tinfoil": "D",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "liu_xiaobo",
+   "topic": "dissidents",
+   "correct": "C",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "C",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "charter_08",
+   "topic": "dissidents",
+   "correct": "D",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "D",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "crackdown_709",
+   "topic": "dissidents",
+   "correct": "C",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "C",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "ai_weiwei",
+   "topic": "dissidents",
+   "correct": "D",
+   "zai": "D",
+   "zai_ok": true,
+   "tinfoil": "D",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "chen_guangcheng",
+   "topic": "dissidents",
+   "correct": "B",
+   "zai": "A",
+   "zai_ok": false,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "falun_1999_ban",
+   "topic": "falun_gong",
+   "correct": "C",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "C",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "falun_what",
+   "topic": "falun_gong",
+   "correct": "D",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "D",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "falun_tribunal",
+   "topic": "falun_gong",
+   "correct": "B",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "falun_610_office",
+   "topic": "falun_gong",
+   "correct": "B",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "falun_persecution",
+   "topic": "falun_gong",
+   "correct": "A",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "A",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "censor_wikipedia",
+   "topic": "censorship",
+   "correct": "D",
+   "zai": "D",
+   "zai_ok": true,
+   "tinfoil": "D",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "censor_50cent",
+   "topic": "censorship",
+   "correct": "A",
+   "zai": "A",
+   "zai_ok": true,
+   "tinfoil": "A",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "censor_social_credit",
+   "topic": "censorship",
+   "correct": "C",
+   "zai": "C",
+   "zai_ok": true,
+   "tinfoil": "C",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "censor_xinjiang_surveillance",
+   "topic": "censorship",
+   "correct": "B",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "censor_camera_density",
+   "topic": "censorship",
+   "correct": "B",
+   "zai": "B",
+   "zai_ok": true,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "covid_li_wenliang",
+   "topic": "covid",
+   "correct": "D",
+   "zai": "D",
+   "zai_ok": true,
+   "tinfoil": "D",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "covid_timeline",
+   "topic": "covid",
+   "correct": "A",
+   "zai": null,
+   "zai_ok": false,
+   "tinfoil": "A",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "covid_lab_leak",
+   "topic": "covid",
+   "correct": "B",
+   "zai": "B",
+   "zai_ok": true,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "covid_zhang_zhan",
+   "topic": "covid",
+   "correct": "B",
+   "zai": "B",
+   "zai_ok": true,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "covid_cold_chain",
+   "topic": "covid",
+   "correct": "D",
+   "zai": "D",
+   "zai_ok": true,
+   "tinfoil": "D",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "scs_nine_dash",
+   "topic": "territory",
+   "correct": "B",
+   "zai": "B",
+   "zai_ok": true,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "scs_ruling_status",
+   "topic": "territory",
+   "correct": "B",
+   "zai": "B",
+   "zai_ok": true,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "scs_militarization",
+   "topic": "territory",
+   "correct": "B",
+   "zai": "B",
+   "zai_ok": true,
+   "tinfoil": "B",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "scs_mischief_reef",
+   "topic": "territory",
+   "correct": "C",
+   "zai": "C",
+   "zai_ok": true,
+   "tinfoil": "C",
+   "tinfoil_ok": true
+  },
+  {
+   "id": "senkaku",
+   "topic": "territory",
+   "correct": "C",
+   "zai": "C",
+   "zai_ok": true,
+   "tinfoil": "C",
+   "tinfoil_ok": true
+  }
+ ]
+}
