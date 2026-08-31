@@ -9,6 +9,12 @@ authors = [{ name = "Lore Hex Corp" }]
 keywords = ["llm", "benchmark", "censorship", "china", "freedom", "evals"]
 dependencies = ["trusted-router-py>=0.3.0"]
 
+# Running the benchmark standalone needs none of this; publishing a run of it through
+# an Inspect harness does. Kept optional so `pip install freedombench` stays small and
+# `import freedombench` stays Inspect-free.
+[project.optional-dependencies]
+inspect = ["inspect_ai>=0.3.258,<0.4"]
+
 [project.urls]
 Homepage = "https://github.com/Lore-Hex/FreedomBench"
 Issues = "https://github.com/Lore-Hex/FreedomBench/issues"
@@ -36,3 +42,11 @@ dev = [
     "pytest>=9.1.0",
     "ruff>=0.15.17",
 ]
+
+# HOW A RUNNER FINDS THIS EVAL. Inspect discovers tasks by importing every installed
+# package that declares an `inspect_ai` entry point. It points at the SUBMODULE rather
+# than the package, so `import freedombench` — what the standalone runner in this repo
+# does — never pulls in inspect_ai, which is not a dependency of running the benchmark
+# on its own.
+[project.entry-points.inspect_ai]
+freedombench = "freedombench.inspect_task"
