@@ -1,6 +1,6 @@
 [project]
 name = "freedombench"
-version = "1.0.0"
+version = "1.0.2"
 description = "AI models that refuse to answer the truth about China — a 60-question multiple-choice benchmark of plain facts the Chinese state censors."
 readme = "README.md"
 requires-python = ">=3.11"
