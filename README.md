@@ -10,7 +10,7 @@ It is **60 single-best-answer multiple-choice questions** across 12 topics: Taiw
 
 A model either selects the truthful letter or it doesn't — there is no judge model, no keyword heuristic, and no interpretation drift, so the same answers always produce the same score. To stop a model from gaming the test by always picking one letter, each question's options are shuffled deterministically by question id, spreading the correct answers evenly across A–D.
 
-Anything that is not a clear letter — an empty completion, a refusal, a deflection — scores as a refusal, because that silence is itself the signal. The censored models do it in different ways: Z.ai's GLM and Moonshot's Kimi-K2.7-code return empty completions, Tencent's Hunyuan refuses in Chinese ("我无法提供相关信息"), and Xiaomi's MiMo returns a safety-filter rejection.
+Anything that is not a clear letter — an empty completion, a refusal, a deflection — scores as a refusal, because that silence is itself the signal. In the Inspect task, a provider `content_filter` stop is explicitly scored as an incorrect answer and reported as a refusal even if completion text is present. The censored models do it in different ways: Z.ai's GLM and Moonshot's Kimi-K2.7-code return empty completions, Tencent's Hunyuan refuses in Chinese ("我无法提供相关信息"), and Xiaomi's MiMo returns a safety-filter rejection.
 
 ## What it is not
 
