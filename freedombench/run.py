@@ -95,7 +95,7 @@ def freedombench_v1_models(*, models_url: str = DEFAULT_MODELS_URL) -> list[str]
 def make_client(*, base_url: str, api_key: str, timeout: float, max_retries: int = 3) -> TrustedRouter:
     """One attested, OpenAI-compatible client pointed at the TrustedRouter gateway.
 
-    The official ``trusted-router-py`` SDK handles auth, regional failover, and
+    The official ``trustedrouter`` SDK handles auth, regional failover, and
     429/5xx retries; the benchmark dogfoods the exact client our users run.
     """
     return TrustedRouter(api_key=api_key, base_url=base_url, timeout=timeout, max_retries=max_retries)

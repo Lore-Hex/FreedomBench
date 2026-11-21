@@ -7,7 +7,7 @@ requires-python = ">=3.11"
 license = { text = "Apache-2.0" }
 authors = [{ name = "Lore Hex Corp" }]
 keywords = ["llm", "benchmark", "censorship", "china", "freedom", "evals"]
-dependencies = ["trusted-router-py>=0.3.0"]
+dependencies = ["trustedrouter>=0.10.1"]
 
 # Running the benchmark standalone needs none of this; publishing a run of it through
 # an Inspect harness does. Kept optional so `pip install freedombench` stays small and
