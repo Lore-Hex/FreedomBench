@@ -25,7 +25,7 @@ freedombench                                # scores the v1 model set
 freedombench-report results/freedombench_results.json
 ```
 
-Every gateway call routes through [TrustedRouter](https://trustedrouter.com) via the official `trusted-router-py` SDK. The model set matches [PrometheusBench](https://github.com/Lore-Hex/PrometheusBench), so the two leaderboards are directly comparable.
+Every gateway call routes through [TrustedRouter](https://trustedrouter.com) via the official `trustedrouter` SDK. The model set matches [PrometheusBench](https://github.com/Lore-Hex/PrometheusBench), so the two leaderboards are directly comparable.
 
 ## Results
 
